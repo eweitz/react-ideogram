@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Header from './Header';
 import './App.css';
 
 import Ideogram from 'ideogram';
@@ -8,17 +8,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Ideogram in React!</h1>
-        </header>
-        <AppIdeogram/>
+        <Header/>
+        <IdeogramComponent/>
       </div>
     );
   }
 }
 
-class AppIdeogram extends Component {
+class IdeogramComponent extends Component {
 
   componentDidMount() {
     return new Ideogram({
