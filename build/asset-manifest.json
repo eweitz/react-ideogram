@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ideogram-react/static/css/main.034a75f0.chunk.css",
-    "main.js": "/ideogram-react/static/js/main.558e9240.chunk.js",
-    "main.js.map": "/ideogram-react/static/js/main.558e9240.chunk.js.map",
+    "main.js": "/ideogram-react/static/js/main.911dd009.chunk.js",
+    "main.js.map": "/ideogram-react/static/js/main.911dd009.chunk.js.map",
     "runtime-main.js": "/ideogram-react/static/js/runtime-main.d9f434e6.js",
     "runtime-main.js.map": "/ideogram-react/static/js/runtime-main.d9f434e6.js.map",
     "static/js/2.243d1e50.chunk.js": "/ideogram-react/static/js/2.243d1e50.chunk.js",
     "static/js/2.243d1e50.chunk.js.map": "/ideogram-react/static/js/2.243d1e50.chunk.js.map",
     "index.html": "/ideogram-react/index.html",
-    "precache-manifest.1a39b57aef1f69223664721a1c53eb4c.js": "/ideogram-react/precache-manifest.1a39b57aef1f69223664721a1c53eb4c.js",
+    "precache-manifest.5e876a27015c4ca59aff27cc5dbccff3.js": "/ideogram-react/precache-manifest.5e876a27015c4ca59aff27cc5dbccff3.js",
     "service-worker.js": "/ideogram-react/service-worker.js",
     "static/css/main.034a75f0.chunk.css.map": "/ideogram-react/static/css/main.034a75f0.chunk.css.map",
     "static/js/2.243d1e50.chunk.js.LICENSE": "/ideogram-react/static/js/2.243d1e50.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d9f434e6.js",
     "static/js/2.243d1e50.chunk.js",
     "static/css/main.034a75f0.chunk.css",
-    "static/js/main.558e9240.chunk.js"
+    "static/js/main.911dd009.chunk.js"
   ]
 }
