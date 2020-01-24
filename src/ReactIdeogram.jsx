@@ -6,7 +6,7 @@ export default class ReactIdeogram extends Component {
 
   componentDidMount() {
     return new Ideogram({
-      organism: 'human',
+      organism: this.props.organism,
       dataDir: 'https://unpkg.com/ideogram@1.16.0/dist/data/bands/native/',
       container: '#ideo-container'
     });

@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import ReactIdeogram from './ReactIdeogram';
-import './App.css';
 
-class App extends Component {
+export default class IdeogramHuman extends Component {
   render() {
     return (
       <div className="App">
-        <Header></Header>
-        <ReactIdeogram/>
+        <Header page='human'/>
+        <ReactIdeogram organism='human'/>
       </div>
     );
   }
 }
-
-export default App;
