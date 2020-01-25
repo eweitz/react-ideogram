@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/ideogram-react/static/css/main.034a75f0.chunk.css",
-    "main.js": "/ideogram-react/static/js/main.40577b19.chunk.js",
-    "main.js.map": "/ideogram-react/static/js/main.40577b19.chunk.js.map",
-    "runtime-main.js": "/ideogram-react/static/js/runtime-main.a9e8531b.js",
-    "runtime-main.js.map": "/ideogram-react/static/js/runtime-main.a9e8531b.js.map",
-    "static/js/2.7793fca9.chunk.js": "/ideogram-react/static/js/2.7793fca9.chunk.js",
-    "static/js/2.7793fca9.chunk.js.map": "/ideogram-react/static/js/2.7793fca9.chunk.js.map",
+    "main.js": "/ideogram-react/static/js/main.dece6c7c.chunk.js",
+    "main.js.map": "/ideogram-react/static/js/main.dece6c7c.chunk.js.map",
+    "runtime-main.js": "/ideogram-react/static/js/runtime-main.d9f434e6.js",
+    "runtime-main.js.map": "/ideogram-react/static/js/runtime-main.d9f434e6.js.map",
+    "static/js/2.07499d52.chunk.js": "/ideogram-react/static/js/2.07499d52.chunk.js",
+    "static/js/2.07499d52.chunk.js.map": "/ideogram-react/static/js/2.07499d52.chunk.js.map",
     "index.html": "/ideogram-react/index.html",
-    "precache-manifest.ca6e311b390b831b23b0d6bb511bcc53.js": "/ideogram-react/precache-manifest.ca6e311b390b831b23b0d6bb511bcc53.js",
+    "precache-manifest.3caf87059f6c0ba604715bd3f9fd34e3.js": "/ideogram-react/precache-manifest.3caf87059f6c0ba604715bd3f9fd34e3.js",
     "service-worker.js": "/ideogram-react/service-worker.js",
     "static/css/main.034a75f0.chunk.css.map": "/ideogram-react/static/css/main.034a75f0.chunk.css.map",
-    "static/js/2.7793fca9.chunk.js.LICENSE": "/ideogram-react/static/js/2.7793fca9.chunk.js.LICENSE"
+    "static/js/2.07499d52.chunk.js.LICENSE": "/ideogram-react/static/js/2.07499d52.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.a9e8531b.js",
-    "static/js/2.7793fca9.chunk.js",
+    "static/js/runtime-main.d9f434e6.js",
+    "static/js/2.07499d52.chunk.js",
     "static/css/main.034a75f0.chunk.css",
-    "static/js/main.40577b19.chunk.js"
+    "static/js/main.dece6c7c.chunk.js"
   ]
 }
