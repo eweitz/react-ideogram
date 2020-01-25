@@ -1,6 +1,7 @@
 import React from 'react';
 import Overview from './Overview';
 import IdeogramHuman from './IdeogramHuman';
+import IdeogramMouse from './IdeogramMouse';
 import './App.css';
 
 import {
@@ -35,6 +36,7 @@ export default function App() {
             <Overview />
           </Route>
           <Route path="/human" component={IdeogramHuman} />
+          <Route path="/mouse" component={IdeogramMouse} />
           {/* <Route path="/Eukaryotes">
             <Eukaryotes />
           </Route> */}
