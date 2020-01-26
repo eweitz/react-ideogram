@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/react-ideogram/static/css/main.3028151b.chunk.css",
-    "main.js": "/react-ideogram/static/js/main.02702464.chunk.js",
-    "main.js.map": "/react-ideogram/static/js/main.02702464.chunk.js.map",
+    "main.js": "/react-ideogram/static/js/main.013ed70f.chunk.js",
+    "main.js.map": "/react-ideogram/static/js/main.013ed70f.chunk.js.map",
     "runtime-main.js": "/react-ideogram/static/js/runtime-main.50c62243.js",
     "runtime-main.js.map": "/react-ideogram/static/js/runtime-main.50c62243.js.map",
-    "static/js/2.3c2975f0.chunk.js": "/react-ideogram/static/js/2.3c2975f0.chunk.js",
-    "static/js/2.3c2975f0.chunk.js.map": "/react-ideogram/static/js/2.3c2975f0.chunk.js.map",
+    "static/js/2.6ab7559b.chunk.js": "/react-ideogram/static/js/2.6ab7559b.chunk.js",
+    "static/js/2.6ab7559b.chunk.js.map": "/react-ideogram/static/js/2.6ab7559b.chunk.js.map",
     "index.html": "/react-ideogram/index.html",
-    "precache-manifest.faca86e9fbba27fd7a59e574477fe6e5.js": "/react-ideogram/precache-manifest.faca86e9fbba27fd7a59e574477fe6e5.js",
+    "precache-manifest.37fe74b6a6b7dd0b84ee33060b95bf81.js": "/react-ideogram/precache-manifest.37fe74b6a6b7dd0b84ee33060b95bf81.js",
     "service-worker.js": "/react-ideogram/service-worker.js",
     "static/css/main.3028151b.chunk.css.map": "/react-ideogram/static/css/main.3028151b.chunk.css.map",
-    "static/js/2.3c2975f0.chunk.js.LICENSE": "/react-ideogram/static/js/2.3c2975f0.chunk.js.LICENSE"
+    "static/js/2.6ab7559b.chunk.js.LICENSE": "/react-ideogram/static/js/2.6ab7559b.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.50c62243.js",
-    "static/js/2.3c2975f0.chunk.js",
+    "static/js/2.6ab7559b.chunk.js",
     "static/css/main.3028151b.chunk.css",
-    "static/js/main.02702464.chunk.js"
+    "static/js/main.013ed70f.chunk.js"
   ]
 }
