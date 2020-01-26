@@ -48,13 +48,36 @@ const organismGroups = [
   },
 ];
 
+function getChrHeightAndRows(org) {
+  let chrHeight = 400;
+  let rows = 1;
+
+  if (
+    org === 'canis lupus familiaris' ||
+    org === 'bos taurus' ||
+    org === 'gallus gallus' ||
+    org === 'leishmania donovani'
+  ) {
+    chrHeight = 200;
+    rows = 2;
+  }
+
+  return [chrHeight, rows];
+}
+
 export default class IdeogramEukaryotes extends Component {
 
   constructor(props) {
     super(props);
     const params = this.props.match.params;
+
+    const org = 'org' in params ? params.org : 'rattus-norvegicus';
+    const [chrHeight, rows] = getChrHeightAndRows(org);
+
     this.state = {
-      'organism': 'org' in params ? params.org : 'rattus-norvegicus'
+      'organism': org,
+      'chrHeight': chrHeight,
+      'rows': rows,
     };
   }
 
@@ -68,7 +91,7 @@ export default class IdeogramEukaryotes extends Component {
     return (
       <div id="eukaryotes-example" className="App">
         <Header page='eukaryotes'/>
-        <ul id="organisms-list">
+        <ul id="organism-list">
         {organismGroups.map((group) => {
           return (
             <li key={'group-' + group.name}><ul>
@@ -78,7 +101,7 @@ export default class IdeogramEukaryotes extends Component {
               const scientificNameSlug = scientificName.replace(/ /g, '-').toLowerCase();
               return (
                 <li key={'organism-' + scientificName}>
-                  <label htmlFor={scientificName}>
+                  <label htmlFor={scientificNameSlug}>
                     <input
                       type='radio' name='org' value={scientificNameSlug} id={scientificNameSlug}
                       onChange={this.handleInputChange}
@@ -93,7 +116,15 @@ export default class IdeogramEukaryotes extends Component {
           )
         })}
         </ul>
-        <ReactIdeogram organism={this.state.organism}/>
+        <div id='container'></div>
+        <ReactIdeogram
+          container='#container'
+          organism={this.state.organism}
+          chrWidth={10}
+          chrHeight={this.state.chrHeight}
+          rows={this.state.rows}
+          showNonNuclearChromosomes={true}
+        />
       </div>
     );
   }
