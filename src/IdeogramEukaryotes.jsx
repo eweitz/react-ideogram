@@ -52,7 +52,7 @@ class OrganismList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedOrganism: props.selectedOrganism
+      organism: props.organism
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -60,12 +60,12 @@ class OrganismList extends Component {
 
   handleInputChange(event) {
     this.setState({
-      'selectedOrganism': event.target.id
+      'organism': event.target.id
     });
   }
 
   render() {
-    const selectedOrganism = this.state.selectedOrganism;
+    const organism = this.state.organism;
     return (
       <ul id="organisms-list">
       {organismGroups.map((group) => {
@@ -81,7 +81,7 @@ class OrganismList extends Component {
                   <input
                     type='radio' name='org' value={scientificNameSlug} id={scientificNameSlug}
                     onChange={this.handleInputChange}
-                    checked={selectedOrganism === scientificNameSlug}
+                    checked={organism === scientificNameSlug}
                   />
                   {name} ({scientificName})
                 </label>
@@ -98,14 +98,53 @@ class OrganismList extends Component {
 
 export default class IdeogramEukaryotes extends Component {
 
-  render() {
+  constructor(props) {
+    super(props);
     const params = this.props.match.params;
-    const organism = 'org' in params ? params.org : 'rattus-norvegicus';
+    console.log('params')
+    console.log(params)
+    this.state = {
+      'organism': 'org' in params ? params.org : 'rattus-norvegicus'
+    };
+    console.log(this.state)
+  }
+
+  handleInputChange = (event) => {
+    this.setState({
+      'organism': event.target.id
+    });
+  }
+
+  render() {
     return (
       <div id="eukaryotes-example" className="App">
         <Header page='eukaryotes'/>
-        <OrganismList selectedOrganism={organism}/>
-        <ReactIdeogram organism={organism}/>
+        <ul id="organisms-list">
+        {organismGroups.map((group) => {
+          return (
+            <li key={'group-' + group.name}><ul>
+            {group.name}
+            {group.organisms.map(([name, scientificName]) => {
+              // e.g. Mus musculus -> mus-musculus
+              const scientificNameSlug = scientificName.replace(/ /g, '-').toLowerCase();
+              return (
+                <li key={'organism-' + scientificName}>
+                  <label htmlFor={scientificName}>
+                    <input
+                      type='radio' name='org' value={scientificNameSlug} id={scientificNameSlug}
+                      onChange={this.handleInputChange}
+                      checked={this.state.organism === scientificNameSlug}
+                    />
+                    {name} ({scientificName})
+                  </label>
+                </li>
+              );
+            })}
+            </ul></li>
+          )
+        })}
+        </ul>
+        <ReactIdeogram organism={this.state.organism}/>
       </div>
     );
   }
