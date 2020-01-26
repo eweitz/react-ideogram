@@ -91,9 +91,9 @@ export default class Header extends Component {
     return (
       <header>
       <h1>{title} | Ideogram</h1>
-      <a href="/ideogram">Overview</a> | {' '}
-      <Link to={prevPage}>Previous</Link> |  {' '}
-      <Link to={nextPage}>Next</Link> |  {' '}
+      <a href="/react-ideogram">Overview</a> | {' '}
+      <Link to={'/react-ideogram/' + prevPage}>Previous</Link> |  {' '}
+      <Link to={'/react-ideogram/' + nextPage}>Next</Link> |  {' '}
       <Link to={sourceLink}>Source</Link> {' '}
       <Summary page={page}/>
       </header>
