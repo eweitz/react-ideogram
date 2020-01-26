@@ -53,10 +53,10 @@ function getChrHeightAndRows(org) {
   let rows = 1;
 
   if (
-    org === 'canis lupus familiaris' ||
-    org === 'bos taurus' ||
-    org === 'gallus gallus' ||
-    org === 'leishmania donovani'
+    org === 'canis-lupus-familiaris' ||
+    org === 'bos-taurus' ||
+    org === 'gallus-gallus' ||
+    org === 'leishmania-donovani'
   ) {
     chrHeight = 200;
     rows = 2;
@@ -69,9 +69,14 @@ export default class IdeogramEukaryotes extends Component {
 
   constructor(props) {
     super(props);
-    const params = this.props.match.params;
+    const params = this.props.location.search;
 
-    const org = 'org' in params ? params.org : 'rattus-norvegicus';
+    const org = params !== '' ? params.split('=')[1] : 'rattus-norvegicus';
+
+    this.props.history.push({
+      search: '?org=' + org
+    });
+
     const [chrHeight, rows] = getChrHeightAndRows(org);
 
     this.state = {
@@ -84,6 +89,9 @@ export default class IdeogramEukaryotes extends Component {
   handleInputChange = (event) => {
     this.setState({
       'organism': event.target.id
+    });
+    this.props.history.push({
+      search: '?org=' + event.target.id
     });
   }
 
