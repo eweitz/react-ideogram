@@ -26,7 +26,7 @@ export default function Summary(props) {
     'eukaryotes':
       <div>
         Ideogram.js can display the genome of any hundreds of organisms, {' '}
-        using data from <a href="https://www.ncbi.nlm.nih.gov/assembly">NCBI Assembly</a>.. 
+        using data from <a href="https://www.ncbi.nlm.nih.gov/assembly">NCBI Assembly</a>.
       </div>,
     'orthologs':
       <div>
