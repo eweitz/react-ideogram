@@ -36,7 +36,6 @@ const specialTitles = {
   'homology-basic': 'Compare PAR'
 };
 
-
 function getPrevNextIndex(pageIndex, prevOrNext) {
   const numPages = pages.length;
   if (pageIndex === 0 && prevOrNext === 'prev') {

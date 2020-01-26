@@ -48,29 +48,53 @@ const organismGroups = [
   },
 ];
 
-function OrganismList() {
-  return (
-    <ul>
-    {organismGroups.map((group) => {
-      return (
-        <ul> 
-        {group.name}
-        {group.organisms.map(([name, scientificName]) => {
-          return (
-            <li>
-              <label for={scientificName}>
-                <input type="radio" name="org" value={scientificName} id={scientificName} />
-                {name} ({scientificName})
-              </label>
-            </li>
-          );
-        })}
-        </ul>
-      )
-    })}
-    </ul>
-  )
-};
+class OrganismList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOrganism: props.selectedOrganism
+    };
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(event) {
+    this.setState({
+      'selectedOrganism': event.target.id
+    });
+  }
+
+  render() {
+    const selectedOrganism = this.state.selectedOrganism;
+    return (
+      <ul id="organisms-list">
+      {organismGroups.map((group) => {
+        return (
+          <li key={'group-' + group.name}><ul>
+          {group.name}
+          {group.organisms.map(([name, scientificName]) => {
+            // e.g. Mus musculus -> mus-musculus
+            const scientificNameSlug = scientificName.replace(/ /g, '-').toLowerCase();
+            return (
+              <li key={'organism-' + scientificName}>
+                <label htmlFor={scientificName}>
+                  <input
+                    type='radio' name='org' value={scientificNameSlug} id={scientificNameSlug}
+                    onChange={this.handleInputChange}
+                    checked={selectedOrganism === scientificNameSlug}
+                  />
+                  {name} ({scientificName})
+                </label>
+              </li>
+            );
+          })}
+          </ul></li>
+        )
+      })}
+      </ul>
+    )
+  }
+}
 
 export default class IdeogramEukaryotes extends Component {
 
@@ -78,9 +102,9 @@ export default class IdeogramEukaryotes extends Component {
     const params = this.props.match.params;
     const organism = 'org' in params ? params.org : 'rattus-norvegicus';
     return (
-      <div className="App">
+      <div id="eukaryotes-example" className="App">
         <Header page='eukaryotes'/>
-        <OrganismList />
+        <OrganismList selectedOrganism={organism}/>
         <ReactIdeogram organism={organism}/>
       </div>
     );
