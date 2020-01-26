@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7e1b6ab0ff6ee06b30b55cced517aab3",
+    "revision": "6429e3d7df7af9a3a631fa5e0fed8230",
     "url": "/react-ideogram/index.html"
   },
   {
-    "revision": "3fee8859cf527835699e",
-    "url": "/react-ideogram/static/css/main.034a75f0.chunk.css"
+    "revision": "05c5bb303ffad23980b7",
+    "url": "/react-ideogram/static/css/main.3028151b.chunk.css"
   },
   {
     "revision": "f5b247314e7afa2f526f",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-ideogram/static/js/2.3c2975f0.chunk.js.LICENSE"
   },
   {
-    "revision": "3fee8859cf527835699e",
-    "url": "/react-ideogram/static/js/main.bdc31afe.chunk.js"
+    "revision": "05c5bb303ffad23980b7",
+    "url": "/react-ideogram/static/js/main.d1a7a989.chunk.js"
   },
   {
     "revision": "41ea1b6963340ae7dacb",
