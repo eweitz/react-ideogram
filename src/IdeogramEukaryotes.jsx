@@ -48,65 +48,14 @@ const organismGroups = [
   },
 ];
 
-class OrganismList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      organism: props.organism
-    };
-
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
-
-  handleInputChange(event) {
-    this.setState({
-      'organism': event.target.id
-    });
-  }
-
-  render() {
-    const organism = this.state.organism;
-    return (
-      <ul id="organisms-list">
-      {organismGroups.map((group) => {
-        return (
-          <li key={'group-' + group.name}><ul>
-          {group.name}
-          {group.organisms.map(([name, scientificName]) => {
-            // e.g. Mus musculus -> mus-musculus
-            const scientificNameSlug = scientificName.replace(/ /g, '-').toLowerCase();
-            return (
-              <li key={'organism-' + scientificName}>
-                <label htmlFor={scientificName}>
-                  <input
-                    type='radio' name='org' value={scientificNameSlug} id={scientificNameSlug}
-                    onChange={this.handleInputChange}
-                    checked={organism === scientificNameSlug}
-                  />
-                  {name} ({scientificName})
-                </label>
-              </li>
-            );
-          })}
-          </ul></li>
-        )
-      })}
-      </ul>
-    )
-  }
-}
-
 export default class IdeogramEukaryotes extends Component {
 
   constructor(props) {
     super(props);
     const params = this.props.match.params;
-    console.log('params')
-    console.log(params)
     this.state = {
       'organism': 'org' in params ? params.org : 'rattus-norvegicus'
     };
-    console.log(this.state)
   }
 
   handleInputChange = (event) => {
