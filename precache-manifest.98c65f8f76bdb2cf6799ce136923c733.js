@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2c8b192395022810242ad2061509ccf4",
+    "revision": "15685b04dfab92d4980dccdb6307fc2a",
     "url": "/react-ideogram/index.html"
   },
   {
-    "revision": "0acbb75da6ba516a441f",
+    "revision": "2ab75026087c782b0c15",
     "url": "/react-ideogram/static/css/main.3028151b.chunk.css"
   },
   {
-    "revision": "8deb1a4d0de6d0c30bc3",
-    "url": "/react-ideogram/static/js/2.07499d52.chunk.js"
+    "revision": "f5b247314e7afa2f526f",
+    "url": "/react-ideogram/static/js/2.3c2975f0.chunk.js"
   },
   {
     "revision": "e928fe768baa9832b5bc57eae021f30c",
-    "url": "/react-ideogram/static/js/2.07499d52.chunk.js.LICENSE"
+    "url": "/react-ideogram/static/js/2.3c2975f0.chunk.js.LICENSE"
   },
   {
-    "revision": "0acbb75da6ba516a441f",
-    "url": "/react-ideogram/static/js/main.5dc2f5a3.chunk.js"
+    "revision": "2ab75026087c782b0c15",
+    "url": "/react-ideogram/static/js/main.f2082a1c.chunk.js"
   },
   {
     "revision": "41ea1b6963340ae7dacb",
