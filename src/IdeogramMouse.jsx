@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import ReactIdeogram from './ReactIdeogram';
 
-export default class IdeogramMouse extends Component {
+export default class IdeogramM extends Component {
   render() {
     return (
       <div className="App">

@@ -102,8 +102,7 @@ export default class IdeogramEukaryotes extends Component {
         <ul id="organism-list">
         {organismGroups.map((group) => {
           return (
-            <li key={'group-' + group.name}><ul>
-            {group.name}
+            <li key={'group-' + group.name}>{group.name}<ul>
             {group.organisms.map(([name, scientificName]) => {
               // e.g. Mus musculus -> mus-musculus
               const scientificNameSlug = scientificName.replace(/ /g, '-').toLowerCase();
